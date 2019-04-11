@@ -23,7 +23,7 @@ treeMethods.contains = function(target) {
   if (this.value === target) {
     return true;
   }
-  for (var i = 0; i < currentChild.length; i++) {
+  for (var i = 0; i < currentChild.length; i++) { //depth first 
     if (currentChild[i].contains(target) === true) {
       return true;
     }
