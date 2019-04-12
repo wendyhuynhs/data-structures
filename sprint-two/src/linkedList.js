@@ -25,6 +25,17 @@ var LinkedList = function() {
 
   list.contains = function(target) {
     // Time Complexity - Linear
+
+    //Recursion Solution
+    // node = this.head;
+    // var contain = false;
+    // if (node.value === target) {
+    //   contain = true;
+    // }
+    // if (node.next) {
+    //   contain = list.contains(target, node.next);
+    // }
+    // return contain;
     var current = this.head;
     while (current) {
       if (current.value === target) {
