@@ -13,17 +13,20 @@ var Tree = function(value) {
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
-  var node = new Tree(value);
+  // Time Complexity - Constant
+  var node = Tree(value);
   this.children.push(node);
 };
 
 treeMethods.contains = function(target) {
+  // Time Complexity - Quadratic
   var currentChild = this.children;
 
   if (this.value === target) {
     return true;
   }
-  for (var i = 0; i < currentChild.length; i++) { //depth first 
+  for (var i = 0; i < currentChild.length; i++) {
+    //depth first
     if (currentChild[i].contains(target) === true) {
       return true;
     }

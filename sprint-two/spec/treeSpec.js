@@ -26,7 +26,7 @@ describe('tree', function() {
     expect(tree.contains(6)).to.equal(false);
   });
 
-  it('should be able to add children to a tree\'s child', function() {
+  it("should be able to add children to a tree's child", function() {
     tree.addChild(5);
     tree.children[0].addChild(6);
     expect(tree.children[0].children[0].value).to.equal(6);
@@ -40,5 +40,4 @@ describe('tree', function() {
     expect(tree.contains(7)).to.equal(true);
     expect(tree.contains(8)).to.equal(true);
   });
-
 });

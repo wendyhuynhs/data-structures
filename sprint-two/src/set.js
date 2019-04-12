@@ -8,10 +8,12 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
+  //Time Complexity - Constant
   this.storage[item] = item;
 };
 
 setPrototype.contains = function(item) {
+  //Time Complexity - Linear
   for (var key in this.storage) {
     if (this.storage[key] === item) {
       return true;
@@ -21,6 +23,7 @@ setPrototype.contains = function(item) {
 };
 
 setPrototype.remove = function(item) {
+  //Time Complexity - Linear
   for (var key in this.storage) {
     if (this.storage[key] === item) {
       delete this.storage[key];

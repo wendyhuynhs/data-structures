@@ -11,6 +11,7 @@ var BinarySearchTree = function(value) {
 var bstMethods = {};
 
 bstMethods.insert = function(value) {
+  // Time Complexity - Linear
   var node = BinarySearchTree(value);
   var currentNode = this;
 
@@ -34,6 +35,7 @@ bstMethods.insert = function(value) {
 };
 
 bstMethods.contains = function(value) {
+  //Time Complexity - Linear
   var currentNode = this;
   var foundNode = false;
 
@@ -46,11 +48,11 @@ bstMethods.contains = function(value) {
       foundNode = true;
     }
   }
-
   return foundNode;
 };
 
 bstMethods.depthFirstLog = function(cb) {
+  //Time Complexity - quadratic
   var currentNode = this;
 
   function helper(node) {

@@ -4,6 +4,7 @@ var HashTable = function() {
 };
 
 HashTable.prototype.insert = function(k, v) {
+  // Time Complexity - Linear
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);
 
@@ -22,6 +23,7 @@ HashTable.prototype.insert = function(k, v) {
 };
 
 HashTable.prototype.retrieve = function(k) {
+  // Time complexity - Linear
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);
 
@@ -35,6 +37,7 @@ HashTable.prototype.retrieve = function(k) {
 };
 
 HashTable.prototype.remove = function(k) {
+  // Time Complexity - Linear
   var index = getIndexBelowMaxForKey(k, this._limit);
   var bucket = this._storage.get(index);
 
