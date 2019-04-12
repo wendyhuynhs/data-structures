@@ -21,7 +21,7 @@ treeMethods.removeFromParent = function(targetChildValue, node) {
         node.children[i].parent === null;
         node.children.splice(i, 1);
         return true;
-      } else if (children[i].children) {
+      } else if (node.children[i].children) {
         remove = this.removeFromParent(node.children[i].children);
       } else {
         return true;

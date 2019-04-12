@@ -71,6 +71,25 @@ bstMethods.depthFirstLog = function(cb) {
   helper(currentNode);
 };
 
+bstMethods.breadthFirstLog = function() {
+  var node = this;
+  var data = [];
+  var queue = [];
+  if (node) {
+    queue.push(node.value);
+  }
+  while (queue.length) {
+    node = queue.shift();
+    data.push(node.value);
+    if (node.left) {
+      queue.push(node.left);
+    }
+    if (node.right) {
+      queue.push(node.right);
+    }
+  }
+  return data;
+};
 /*
  * Complexity: What is the time complexity of the above functions?
  */
